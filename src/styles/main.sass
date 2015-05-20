@@ -1,0 +1,95 @@
+body {
+  background: #e6e6e6;
+  font-family: "Arial";
+}
+
+header {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  img {
+    width: 100%;
+  }
+}
+
+form, #video, #about {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.searchbar {
+  background: url('../assets/images/beta.png') white;
+  background-position: right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  border: 1px solid #333;
+  box-shadow: 0 1px 2px #999;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 1.3em;
+  box-sizing: border-box;
+}
+
+.channel-list  {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 5px 5px;
+      background: #eee;
+      margin-bottom: 2px;
+      width: 100%;
+      min-height: 40px;
+      line-height: 40px;
+      box-sizing: border-box;
+      &:hover, &:focus {
+        outline: none;
+        background: #f9f9f9;
+      }
+      img {
+        width: 40px;
+        vertical-align: middle;
+      }
+  }
+}
+
+.refresh {
+  float: right;
+  color: #888;
+  font-size: 0.9em;
+  margin-right: 10px;
+  line-height: 40px;
+}
+
+#embedded_video {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+@media all and (max-width: 700px) {
+  header, form, #video, #about, footer, .channel-list {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  header, form, #video, #about, footer, .channel-list {
+    width: 95%;
+  }
+}
