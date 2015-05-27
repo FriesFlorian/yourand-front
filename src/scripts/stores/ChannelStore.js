@@ -21,6 +21,14 @@ export default class ChannelStore extends Store {
             }
             this.changed();
         });
+
+        this.listen(actions, 'keepCurrent', channels => {
+            this.channels = Immutable.Map();
+            for(let channel of channels) {
+                this.channels = this.channels.set(channel.get('id'), channel);
+            }
+            this.changed();
+        });
     }
 
     // Public API

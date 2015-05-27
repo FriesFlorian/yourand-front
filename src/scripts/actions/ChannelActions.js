@@ -24,4 +24,9 @@ export default class ChannelActions extends Action {
         const channels = await serverFetchChannels(this.apiendpoint, name);
         this.emit('fetchChannels', channels);
     }
+
+    async keepCurrent(channel) {
+        const channels = [channel];
+        this.emit('keepCurrent', channels);
+    }
 }
