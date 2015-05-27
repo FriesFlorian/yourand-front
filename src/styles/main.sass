@@ -14,7 +14,7 @@ header {
   }
 }
 
-form, #video, #about {
+form, #video, #about, .video-player {
   width: 80%;
   max-width: 700px;
   margin: auto;
@@ -39,7 +39,8 @@ form, #video, #about {
   width: 80%;
   max-width: 700px;
   margin: auto;
-  a {
+  .channel-item {
+      cursor: pointer;
       color: #333;
       text-decoration: none;
       display: block;
@@ -83,13 +84,13 @@ footer {
 }
 
 @media all and (max-width: 700px) {
-  header, form, #video, #about, footer, .channel-list {
+  header, form, #video, #about, footer, .channel-list, .video-player {
     width: 90%;
   }
 }
 
 @media all and (max-width: 400px) {
-  header, form, #video, #about, footer, .channel-list {
+  header, form, #video, #about, footer, .channel-list, .video-player {
     width: 95%;
   }
 }

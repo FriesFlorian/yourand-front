@@ -9,3 +9,10 @@ export class ChannelRecord extends Immutable.Record({
 }) {
     label() { return this.get('name'); }
 }
+
+export class VideoRecord extends Immutable.Record({
+    id: null,
+    title: null
+}) {
+    label() { return this.get('title'); }
+}
