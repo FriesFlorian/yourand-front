@@ -1,8 +1,8 @@
 {
-  "name": "idiomatic-react",
-  "version": "0.0.0",
-  "description": "",
-  "repository": "",
+  "name": "yourand-front",
+  "version": "0.0.1",
+  "description": "YouRand's client-side application",
+  "repository": "https://github.com/FriesFlorian/yourand-front",
   "private": true,
   "src": "src",
   "test": "test",
