@@ -9,7 +9,7 @@ export default class YoutubePlayer extends React.Component {
     };
 
     render() {
-        const video = this.props.video;
+        const { video } = this.props;
 
         return (
             <div className="video-player">
