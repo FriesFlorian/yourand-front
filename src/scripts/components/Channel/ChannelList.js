@@ -30,7 +30,7 @@ export default class ChannelList extends React.Component {
         return (
             <div className="channel-list">
                 {channels.map((channel) =>
-                    <div className="channel-item" href="" key={channel.get('id')} onClick={handleClick.bind(this, channel)}><img src={channel.get('thumbnail')} alt="profile pic" title="" /> {channel.label()}</div>
+                    <div className="channel-item" key={channel.get('id')} onClick={handleClick.bind(this, channel)}><img src={channel.get('thumbnail')} alt="profile pic" title="" /> {channel.label()}</div>
                 )}
             </div>
         );
