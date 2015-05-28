@@ -11,7 +11,6 @@ export default class InterfaceHome extends React.Component {
     };
 
     componentWillMount() {
-        console.log(this.context);
         this.unwatchVideostore = this.context.videostore.watch(this.forceUpdate.bind(this));
     };
 
@@ -23,17 +22,13 @@ export default class InterfaceHome extends React.Component {
 
         const videos = videostore.getVideos();
 
-        let player = "";
-
-        if(videos[0] !== undefined) {
-             player = <YoutubePlayer video={videos[0]} />;
-        }
-
         return (
             <div>
                 <ChannelSearchBar />
                 <ChannelList />
-                {player}
+                {videos.length > 0 && (
+                    <YoutubePlayer video={videos[0]} />
+                )}
             </div>
         );
     }
