@@ -19,17 +19,21 @@ export default class SearchBar extends React.Component {
 
         const handleChange = (e) => {
             this.setState({value: e.target.value});
+        };
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
             if(this.state.value.trim() === '') { return; }
-            videoactions.fetchVideosBySearch(e.target.value);
+            videoactions.fetchVideosBySearch(this.state.value);
         };
 
         const handleClick = () => {
-            videoactions.fetchVideosBySearch(this.value.state);
+            videoactions.fetchVideosBySearch(this.state.value);
         };
 
         return (
             <div>
-                <form action="#">
+                <form action="#" onSubmit={handleSubmit} >
                     <input type="text" className="searchbar" placeholder="Search for something..." autoComplete="off" value={this.state.value} onChange={handleChange} />
                 </form>
                 <div className="channel-list">

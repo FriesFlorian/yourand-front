@@ -11,7 +11,7 @@ const serverFetchVideos = async (apiendpoint, channelId) => {
 };
 
 const serverFetchVideosBySearch = async (apiendpoint, query) => {
-    let videos = await axios.get(apiendpoint + '/videos?mode=cover&query=' + query);
+    let videos = await axios.get(apiendpoint + '/videos?mode=search&query=' + query);
     return videos.data.map(o => new VideoRecord(o));
 };
 
